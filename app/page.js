@@ -9,7 +9,7 @@ import StoreSection from "./components/StoreSection";
 
 export default function Home() {
   return (
-    <>
+    <body className="bg-gradient-to-br from-black via-[#F97216] to-white min-h-screen" >
         <Hero/>
         <BoldStatic/>
         <CommunitySection />
@@ -18,6 +18,6 @@ export default function Home() {
         <FaqSection />
         <Footer/>
         
-    </>
+    </body>
   );
 }

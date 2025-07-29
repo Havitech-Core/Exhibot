@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 /* Font imports */
 
 /* Custom font face for Exima Geometric */
@@ -20,6 +21,11 @@
   src: url('/fonts/IBMPlexSans.ttf') format('truetype');
   font-display: swap;
 }
+.mix-blend-invert {
+  mix-blend-mode: difference;
+  color:white
+}
+
 
 .font-heading {
   font-family: 'Exima Geometric';
@@ -27,4 +33,28 @@
   font-display: swap;
 }
 
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .text-4xl { font-size: 2rem; }
+  .text-6xl { font-size: 3rem; }
+  .px-8 { padding-left: 1rem; padding-right: 1rem; }
+}
 
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-4xl { font-size: 2.5rem; }
+  .text-6xl { font-size: 4rem; }
+}
+
+/* Fun glitch effect */
+.glitch-char:hover {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
